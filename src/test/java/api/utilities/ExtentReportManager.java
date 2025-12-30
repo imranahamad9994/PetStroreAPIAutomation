@@ -36,8 +36,8 @@ public class ExtentReportManager implements ITestListener {
         sparkReporter = new ExtentSparkReporter(".\\reports\\" + repName); // specify report location
 
         // Configure report aesthetics
-        sparkReporter.config().setDocumentTitle("Opencart Automation Report");
-        sparkReporter.config().setReportName("Opencartedfcv b Functional Testing");
+        sparkReporter.config().setDocumentTitle("Swagger PetStore APIs - UserTest");
+        sparkReporter.config().setReportName("User API Test");
         
         sparkReporter.config().setTheme(Theme.DARK);
 
@@ -46,7 +46,7 @@ public class ExtentReportManager implements ITestListener {
         extent.attachReporter(sparkReporter);
 
         // Add environment/system info
-        extent.setSystemInfo("Application", "Opencart");
+        extent.setSystemInfo("API", "PetStore");
         extent.setSystemInfo("Module", "Admin");
         extent.setSystemInfo("Sub Module", "Customers");
         extent.setSystemInfo("User Name", System.getProperty("user.name"));

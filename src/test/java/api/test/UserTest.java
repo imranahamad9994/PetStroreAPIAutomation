@@ -30,7 +30,7 @@ public class UserTest {
 		userPayload.setPhone(faker.phoneNumber().cellPhone());		
 	}
 	
-	@Test(priority =1)
+	@Test()
 	void testPostUser() {
 		
 		Response response = UserEndPoints.createUser(userPayload);
@@ -49,7 +49,7 @@ public class UserTest {
 		
 	}
 	
-	@Test(priority =2)
+	@Test(dependsOnMethods = "testPostUser")
 	void getUserByUsername()
 	{
 		Response response = UserEndPoints.readUser(userPayload.getUsername());
@@ -61,6 +61,8 @@ public class UserTest {
 						.body("email", equalTo(userPayload.getEmail()))
 						.body("id", notNullValue());
 		
+		response.then().time(lessThan(2000L));
+		
 		//verify data consistency
 		String username = response.jsonPath().getString("username");
 		Assert.assertEquals(username, userPayload.getUsername());
@@ -69,7 +71,7 @@ public class UserTest {
 		
 	}
 	
-	@Test(priority =3)
+	@Test(dependsOnMethods ="getUserByUsername")
 	void updateUserByUsername()
 	{
 		
@@ -84,6 +86,7 @@ public class UserTest {
 		response.then().body("code", equalTo(200))
 						.body("type", equalTo("unknown"))
 						.body("message", notNullValue());
+		response.then().time(lessThan(2000L));
 		
 		Assert.assertEquals(response.getStatusCode(), 200);
 		
@@ -93,16 +96,29 @@ public class UserTest {
 		getUpdateResponse.then().body("firstName", equalTo(userPayload.getFirstName()))
 								.body("lastName", equalTo(userPayload.getLastName()))
 								.body("email", equalTo(userPayload.getEmail()));
-	
+		getUpdateResponse.then().time(lessThan(2000L));
 	}
 	
-	@Test(priority =4)
+	@Test(dependsOnMethods = "updateUserByUsername")
 	void deleteUserByUsername()
 	{
 		Response response = UserEndPoints.deleteUser(userPayload.getUsername());
 		response.then().log().all();
+		
+		response.then().time(lessThan(2000L));
 		Assert.assertEquals(response.getStatusCode(), 200);
 		
 	}
-
+	
+	//Negative Test
+	@Test(dependsOnMethods = "deleteUserByUsername")
+	void getInvalidUser()
+	{
+		UserEndPoints.readUser(userPayload.getUsername())
+		.then()		
+			.statusCode(404);
+		
+		
+		
+	}
 }

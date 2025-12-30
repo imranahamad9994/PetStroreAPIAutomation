@@ -1,32 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-30T16:39:59 IST" name="Default suite" finished-at="2025-12-30T16:40:10 IST" duration-ms="11040">
+  <suite started-at="2025-12-30T17:21:01 IST" name="Default suite" finished-at="2025-12-30T17:21:13 IST" duration-ms="12728">
     <groups>
     </groups>
-    <test started-at="2025-12-30T16:39:59 IST" name="Default test" finished-at="2025-12-30T16:40:10 IST" duration-ms="11040">
+    <test started-at="2025-12-30T17:21:01 IST" name="Default test" finished-at="2025-12-30T17:21:13 IST" duration-ms="12728">
       <class name="api.test.UserTest">
-        <test-method is-config="true" signature="setupData()[pri:0, instance:api.test.UserTest@6ed3ccb2]" started-at="2025-12-30T16:39:59 IST" name="setupData" finished-at="2025-12-30T16:40:00 IST" duration-ms="276" status="PASS">
+        <test-method is-config="true" signature="setupData()[pri:0, instance:api.test.UserTest@15de0b3c]" started-at="2025-12-30T17:21:01 IST" name="setupData" finished-at="2025-12-30T17:21:01 IST" duration-ms="293" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupData -->
-        <test-method signature="testPostUser()[pri:1, instance:api.test.UserTest@6ed3ccb2]" started-at="2025-12-30T16:40:00 IST" name="testPostUser" finished-at="2025-12-30T16:40:04 IST" duration-ms="4586" status="PASS">
+        <test-method signature="testPostUser()[pri:0, instance:api.test.UserTest@15de0b3c]" started-at="2025-12-30T17:21:01 IST" name="testPostUser" finished-at="2025-12-30T17:21:05 IST" duration-ms="4519" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPostUser -->
-        <test-method signature="getUserByUsername()[pri:2, instance:api.test.UserTest@6ed3ccb2]" started-at="2025-12-30T16:40:04 IST" name="getUserByUsername" finished-at="2025-12-30T16:40:06 IST" duration-ms="1605" status="PASS">
+        <test-method signature="getUserByUsername()[pri:0, instance:api.test.UserTest@15de0b3c]" started-at="2025-12-30T17:21:05 IST" name="getUserByUsername" finished-at="2025-12-30T17:21:07 IST" depends-on-methods="api.test.UserTest.testPostUser" duration-ms="1685" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getUserByUsername -->
-        <test-method signature="updateUserByUsername()[pri:3, instance:api.test.UserTest@6ed3ccb2]" started-at="2025-12-30T16:40:06 IST" name="updateUserByUsername" finished-at="2025-12-30T16:40:09 IST" duration-ms="3026" status="PASS">
+        <test-method signature="updateUserByUsername()[pri:0, instance:api.test.UserTest@15de0b3c]" started-at="2025-12-30T17:21:07 IST" name="updateUserByUsername" finished-at="2025-12-30T17:21:10 IST" depends-on-methods="api.test.UserTest.getUserByUsername" duration-ms="3065" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateUserByUsername -->
-        <test-method signature="deleteUserByUsername()[pri:4, instance:api.test.UserTest@6ed3ccb2]" started-at="2025-12-30T16:40:09 IST" name="deleteUserByUsername" finished-at="2025-12-30T16:40:10 IST" duration-ms="1491" status="PASS">
+        <test-method signature="deleteUserByUsername()[pri:0, instance:api.test.UserTest@15de0b3c]" started-at="2025-12-30T17:21:10 IST" name="deleteUserByUsername" finished-at="2025-12-30T17:21:12 IST" depends-on-methods="api.test.UserTest.updateUserByUsername" duration-ms="1559" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteUserByUsername -->
+        <test-method signature="getInvalidUser()[pri:0, instance:api.test.UserTest@15de0b3c]" started-at="2025-12-30T17:21:12 IST" name="getInvalidUser" finished-at="2025-12-30T17:21:13 IST" depends-on-methods="api.test.UserTest.deleteUserByUsername" duration-ms="1542" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getInvalidUser -->
       </class> <!-- api.test.UserTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
