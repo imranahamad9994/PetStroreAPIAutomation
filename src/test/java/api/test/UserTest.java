@@ -110,15 +110,55 @@ public class UserTest {
 		
 	}
 	
-	//Negative Test
-	@Test(dependsOnMethods = "deleteUserByUsername")
-	void getInvalidUser()
+	//Negative Tests
+	
+	@Test(dependsOnMethods = "deleteUserByUsername")// get user that is already deleted
+	void getAlreadyDeletedUser()
 	{
 		UserEndPoints.readUser(userPayload.getUsername())
 		.then()		
-			.statusCode(404);
+			.statusCode(404);	
+	}
+	
+	@Test(dependsOnMethods = "getAlreadyDeletedUser")
+	// 👉 PUT /user/{username} RE-CREATES THE USER
+	//This means:
+	//Swagger Petstore treats PUT as UPSERT
+	//Update if exists
+	//Create if NOT exists ❌ (bad REST design, but real behavior)
+	//So your assumption:
+	//“User should still NOT exist”
+	//is incorrect for this API.
+	void updateDeletedUser()
+	{
 		
+		userPayload.setFirstName(faker.name().firstName());
+		userPayload.setLastName(faker.name().lastName());
+
 		
+		Response response = UserEndPoints.updateUser(userPayload.getUsername(), userPayload);
+		
+		response.then().log().all();
+		
+		// Swagger Petstore returns 200 even if user does not exist
+	    response.then().statusCode(200); // Should return 404, but this API returns 200
+
+	    // REAL validation: user should still NOT exist
+	    UserEndPoints.readUser(userPayload.getUsername())
+	    			.then()
+	    			.statusCode(200)  // Should return 404, but this API returns 200 // Swagger Petstore recreates user on PUT (UPSERT behavior) 
+	    			.body("firstName", equalTo(userPayload.getFirstName()))
+	    			.body("lastName", equalTo(userPayload.getLastName()));
+		
+	}
+	
+	@Test(dependsOnMethods = "getAlreadyDeletedUser")//Delete user that is already deleted
+	void deleteAlreadyDeletedUser()
+	{
+		Response response = UserEndPoints.deleteUser(userPayload.getUsername());
+		response.then().log().all();
+		response.then().time(lessThan(2000L));
+		response.then().statusCode(404);
 		
 	}
 }

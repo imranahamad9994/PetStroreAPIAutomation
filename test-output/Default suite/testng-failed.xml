@@ -5,6 +5,12 @@
     <classes>
       <class name="api.test.UserTest">
         <methods>
+          <include name="updateDeletedUser"/>
+          <include name="getUserByUsername"/>
+          <include name="getAlreadyDeletedUser"/>
+          <include name="deleteUserByUsername"/>
+          <include name="testPostUser"/>
+          <include name="deleteAlreadyDeletedUser"/>
           <include name="setupData"/>
           <include name="updateUserByUsername"/>
         </methods>
