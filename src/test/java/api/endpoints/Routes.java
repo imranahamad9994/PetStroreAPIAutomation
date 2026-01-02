@@ -19,7 +19,12 @@ public class Routes {
 	public static String put_url = base_url+"/user/{username}";
 	public static String delete_url = base_url+"/user/{username}";
 	
-	//User Module
+	//Store Module
+	
+	public static String storePostURL = base_url+"/store/order";
+	public static String storeGetAllURL = base_url+"/store/inventory";
+	public static String storeGetOneURL = base_url+"/store/order/{orderId}";
+	public static String storeDeleteURL = base_url+"/store/order/{orderId}";
 	
 	//Pet Module
 	

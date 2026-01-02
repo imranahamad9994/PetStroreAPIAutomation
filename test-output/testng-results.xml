@@ -1,45 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-31T10:28:46 IST" name="Default suite" finished-at="2025-12-31T10:29:03 IST" duration-ms="17306">
+  <suite started-at="2026-01-02T11:10:34 IST" name="Default suite" finished-at="2026-01-02T11:10:43 IST" duration-ms="8728">
     <groups>
     </groups>
-    <test started-at="2025-12-31T10:28:46 IST" name="Default test" finished-at="2025-12-31T10:29:03 IST" duration-ms="17306">
-      <class name="api.test.UserTest">
-        <test-method is-config="true" signature="setupData()[pri:0, instance:api.test.UserTest@15de0b3c]" started-at="2025-12-31T10:28:46 IST" name="setupData" finished-at="2025-12-31T10:28:46 IST" duration-ms="263" status="PASS">
+    <test started-at="2026-01-02T11:10:34 IST" name="Default test" finished-at="2026-01-02T11:10:43 IST" duration-ms="8728">
+      <class name="api.test.StoreTest">
+        <test-method signature="testCreateOrder()[pri:0, instance:api.test.StoreTest@6236eb5f]" started-at="2026-01-02T11:10:34 IST" name="testCreateOrder" finished-at="2026-01-02T11:10:39 IST" duration-ms="4233" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setupData -->
-        <test-method signature="testPostUser()[pri:0, instance:api.test.UserTest@15de0b3c]" started-at="2025-12-31T10:28:46 IST" name="testPostUser" finished-at="2025-12-31T10:28:50 IST" duration-ms="4586" status="PASS">
+        </test-method> <!-- testCreateOrder -->
+        <test-method signature="testGetOrder()[pri:0, instance:api.test.StoreTest@6236eb5f]" started-at="2026-01-02T11:10:39 IST" name="testGetOrder" finished-at="2026-01-02T11:10:40 IST" depends-on-methods="api.test.StoreTest.testCreateOrder" duration-ms="1492" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testPostUser -->
-        <test-method signature="getUserByUsername()[pri:0, instance:api.test.UserTest@15de0b3c]" started-at="2025-12-31T10:28:50 IST" name="getUserByUsername" finished-at="2025-12-31T10:28:52 IST" depends-on-methods="api.test.UserTest.testPostUser" duration-ms="1740" status="PASS">
+        </test-method> <!-- testGetOrder -->
+        <test-method signature="testDeleteOrder()[pri:0, instance:api.test.StoreTest@6236eb5f]" started-at="2026-01-02T11:10:40 IST" name="testDeleteOrder" finished-at="2026-01-02T11:10:43 IST" depends-on-methods="api.test.StoreTest.testGetOrder" duration-ms="2935" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getUserByUsername -->
-        <test-method signature="updateUserByUsername()[pri:0, instance:api.test.UserTest@15de0b3c]" started-at="2025-12-31T10:28:52 IST" name="updateUserByUsername" finished-at="2025-12-31T10:28:55 IST" depends-on-methods="api.test.UserTest.getUserByUsername" duration-ms="3108" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updateUserByUsername -->
-        <test-method signature="deleteUserByUsername()[pri:0, instance:api.test.UserTest@15de0b3c]" started-at="2025-12-31T10:28:55 IST" name="deleteUserByUsername" finished-at="2025-12-31T10:28:57 IST" depends-on-methods="api.test.UserTest.updateUserByUsername" duration-ms="1536" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteUserByUsername -->
-        <test-method signature="getAlreadyDeletedUser()[pri:0, instance:api.test.UserTest@15de0b3c]" started-at="2025-12-31T10:28:57 IST" name="getAlreadyDeletedUser" finished-at="2025-12-31T10:28:58 IST" depends-on-methods="api.test.UserTest.deleteUserByUsername" duration-ms="1519" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getAlreadyDeletedUser -->
-        <test-method signature="deleteAlreadyDeletedUser()[pri:0, instance:api.test.UserTest@15de0b3c]" started-at="2025-12-31T10:28:58 IST" name="deleteAlreadyDeletedUser" finished-at="2025-12-31T10:29:00 IST" depends-on-methods="api.test.UserTest.getAlreadyDeletedUser" duration-ms="1522" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteAlreadyDeletedUser -->
-        <test-method signature="updateDeletedUser()[pri:0, instance:api.test.UserTest@15de0b3c]" started-at="2025-12-31T10:29:00 IST" name="updateDeletedUser" finished-at="2025-12-31T10:29:03 IST" depends-on-methods="api.test.UserTest.getAlreadyDeletedUser" duration-ms="2967" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updateDeletedUser -->
-      </class> <!-- api.test.UserTest -->
+        </test-method> <!-- testDeleteOrder -->
+      </class> <!-- api.test.StoreTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
