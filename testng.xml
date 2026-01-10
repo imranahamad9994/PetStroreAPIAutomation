@@ -9,8 +9,11 @@
   <test thread-count="5" name="Test">
     <classes>
     <!--   <class name="api.test.UserTest"/>
+    		<class name="api.test.StoreTest"/>
       		<class name="api.test.UserTestDDT"/>-->
       		<class name="api.test.UserTest"/>
+      		<class name="api.test.StoreTest"/>
+      		<class name="api.test.UserTestDDT"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

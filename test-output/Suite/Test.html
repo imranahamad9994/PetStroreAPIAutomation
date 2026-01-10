@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>4/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>33/1/6</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Dec 30 17:10:49 IST 2025</td>
+<td>Started on:</td><td>Sat Jan 03 15:15:18 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>11 seconds (11190 ms)</td>
+<tr><td>Total time:</td><td>108 seconds (108747 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,94 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='api.test.UserTest.testPostUser()'><b>testPostUser</b><br>Test class: api.test.UserTest</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected response time was not a value less than &lt;3000L&gt; milliseconds, was 3358 milliseconds (3358 milliseconds).
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.time(ResponseSpecificationImpl.groovy:127)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.time(ValidatableResponseOptionsImpl.java:409)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.time(ValidatableResponseOptionsImpl.java:405)
+	at api.test.UserTest.testPostUser(UserTest.java:46)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace815927219", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace815927219'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected response time was not a value less than &lt;3000L&gt; milliseconds, was 3358 milliseconds (3358 milliseconds).
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.time(ResponseSpecificationImpl.groovy:127)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.time(ValidatableResponseOptionsImpl.java:409)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.time(ValidatableResponseOptionsImpl.java:405)
+	at api.test.UserTest.testPostUser(UserTest.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>5</td>
+<td>api.test.UserTest@198b6731</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,25 +164,359 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='api.test.UserTest.getUserByUsername()'><b>getUserByUsername</b><br>Test class: api.test.UserTest</td>
-<td></td>
-<td>1</td>
-<td>api.test.UserTest@489115ef</td></tr>
-<tr>
-<td title='api.test.UserTest.deleteUserByUsername()'><b>deleteUserByUsername</b><br>Test class: api.test.UserTest</td>
-<td></td>
-<td>1</td>
-<td>api.test.UserTest@489115ef</td></tr>
-<tr>
-<td title='api.test.UserTest.testPostUser()'><b>testPostUser</b><br>Test class: api.test.UserTest</td>
-<td></td>
-<td>4</td>
-<td>api.test.UserTest@489115ef</td></tr>
-<tr>
-<td title='api.test.UserTest.updateUserByUsername()'><b>updateUserByUsername</b><br>Test class: api.test.UserTest</td>
+<td title='api.test.UserTestDDT.testCreateAndDeleteUser()'><b>testCreateAndDeleteUser</b><br>Test class: api.test.UserTestDDT<br>Parameters: ppennamanp, Patrice, Pennaman, ppennamanp@sciencedirect.com, 4871892527</td>
 <td></td>
 <td>3</td>
-<td>api.test.UserTest@489115ef</td></tr>
+<td>api.test.UserTestDDT@2177849e</td></tr>
+<tr>
+<td title='api.test.UserTestDDT.testCreateAndDeleteUser()'><b>testCreateAndDeleteUser</b><br>Test class: api.test.UserTestDDT<br>Parameters: rdooreyd, Reuven, Doorey, rdooreyd@google.de, 1654577999</td>
+<td></td>
+<td>3</td>
+<td>api.test.UserTestDDT@2177849e</td></tr>
+<tr>
+<td title='api.test.UserTestDDT.testCreateAndDeleteUser()'><b>testCreateAndDeleteUser</b><br>Test class: api.test.UserTestDDT<br>Parameters: ssambellst, Staci, Sambells, ssambellst@berkeley.edu, 6979471902</td>
+<td></td>
+<td>3</td>
+<td>api.test.UserTestDDT@2177849e</td></tr>
+<tr>
+<td title='api.test.UserTestDDT.testCreateAndDeleteUser()'><b>testCreateAndDeleteUser</b><br>Test class: api.test.UserTestDDT<br>Parameters: jriach8, Jayson, Riach, jriach8@whitehouse.gov, 9086034190</td>
+<td></td>
+<td>3</td>
+<td>api.test.UserTestDDT@2177849e</td></tr>
+<tr>
+<td title='api.test.UserTestDDT.testCreateAndDeleteUser()'><b>testCreateAndDeleteUser</b><br>Test class: api.test.UserTestDDT<br>Parameters: khullesa, Ketti, Hulles, khullesa@discuz.net, 9756859633</td>
+<td></td>
+<td>3</td>
+<td>api.test.UserTestDDT@2177849e</td></tr>
+<tr>
+<td title='api.test.UserTestDDT.testCreateAndDeleteUser()'><b>testCreateAndDeleteUser</b><br>Test class: api.test.UserTestDDT<br>Parameters: smarringtonn, Shaina, Marrington, smarringtonn@smugmug.com, 1703461281</td>
+<td></td>
+<td>3</td>
+<td>api.test.UserTestDDT@2177849e</td></tr>
+<tr>
+<td title='api.test.UserTestDDT.testCreateAndDeleteUser()'><b>testCreateAndDeleteUser</b><br>Test class: api.test.UserTestDDT<br>Parameters: ztapscott7, Zena, Tapscott, ztapscott7@nba.com, 8382109527</td>
+<td></td>
+<td>2</td>
+<td>api.test.UserTestDDT@2177849e</td></tr>
+<tr>
+<td title='api.test.UserTestDDT.testCreateAndDeleteUser()'><b>testCreateAndDeleteUser</b><br>Test class: api.test.UserTestDDT<br>Parameters: nmielnik2, Nelli, Mielnik, nmielnik2@state.tx.us, 2597222744</td>
+<td></td>
+<td>3</td>
+<td>api.test.UserTestDDT@2177849e</td></tr>
+<tr>
+<td title='api.test.UserTestDDT.testCreateAndDeleteUser()'><b>testCreateAndDeleteUser</b><br>Test class: api.test.UserTestDDT<br>Parameters: ableasdillec, Artus, Bleasdille, ableasdillec@ucoz.com, 6615725818</td>
+<td></td>
+<td>3</td>
+<td>api.test.UserTestDDT@2177849e</td></tr>
+<tr>
+<td title='api.test.StoreTest.testDeleteOrder()'><b>testDeleteOrder</b><br>Test class: api.test.StoreTest</td>
+<td></td>
+<td>3</td>
+<td>api.test.StoreTest@3541cb24</td></tr>
+<tr>
+<td title='api.test.UserTestDDT.testCreateAndDeleteUser()'><b>testCreateAndDeleteUser</b><br>Test class: api.test.UserTestDDT<br>Parameters: cedgertone, Cyrille, Edgerton, cedgertone@aboutads.info, 5804772434</td>
+<td></td>
+<td>3</td>
+<td>api.test.UserTestDDT@2177849e</td></tr>
+<tr>
+<td title='api.test.UserTestDDT.testCreateAndDeleteUser()'><b>testCreateAndDeleteUser</b><br>Test class: api.test.UserTestDDT<br>Parameters: kpavieg, Kilian, Pavie, kpavieg@diigo.com, 4463162893</td>
+<td></td>
+<td>3</td>
+<td>api.test.UserTestDDT@2177849e</td></tr>
+<tr>
+<td title='api.test.UserTestDDT.testCreateAndDeleteUser()'><b>testCreateAndDeleteUser</b><br>Test class: api.test.UserTestDDT<br>Parameters: ajosefsohnr, Aurthur, Josefsohn, ajosefsohnr@marketwatch.com, 1212706962</td>
+<td></td>
+<td>3</td>
+<td>api.test.UserTestDDT@2177849e</td></tr>
+<tr>
+<td title='api.test.UserTestDDT.testCreateAndDeleteUser()'><b>testCreateAndDeleteUser</b><br>Test class: api.test.UserTestDDT<br>Parameters: sshearstoneo, Steffane, Shearstone, sshearstoneo@cbc.ca, 8791634619</td>
+<td></td>
+<td>2</td>
+<td>api.test.UserTestDDT@2177849e</td></tr>
+<tr>
+<td title='api.test.UserTestDDT.testCreateAndDeleteUser()'><b>testCreateAndDeleteUser</b><br>Test class: api.test.UserTestDDT<br>Parameters: aleeman3, Anette, Leeman, aleeman3@domainmarket.com, 1399075428</td>
+<td></td>
+<td>3</td>
+<td>api.test.UserTestDDT@2177849e</td></tr>
+<tr>
+<td title='api.test.UserTestDDT.testCreateAndDeleteUser()'><b>testCreateAndDeleteUser</b><br>Test class: api.test.UserTestDDT<br>Parameters: bmewhah, Ban, Mewha, bmewhah@wufoo.com, 5779848069</td>
+<td></td>
+<td>3</td>
+<td>api.test.UserTestDDT@2177849e</td></tr>
+<tr>
+<td title='api.test.UserTestDDT.testCreateAndDeleteUser()'><b>testCreateAndDeleteUser</b><br>Test class: api.test.UserTestDDT<br>Parameters: sdavid5, Sidonnie, David, sdavid5@mapquest.com, 7935475136</td>
+<td></td>
+<td>3</td>
+<td>api.test.UserTestDDT@2177849e</td></tr>
+<tr>
+<td title='api.test.StoreTest.testGetOrder()'><b>testGetOrder</b><br>Test class: api.test.StoreTest</td>
+<td></td>
+<td>1</td>
+<td>api.test.StoreTest@3541cb24</td></tr>
+<tr>
+<td title='api.test.UserTestDDT.testCreateAndDeleteUser()'><b>testCreateAndDeleteUser</b><br>Test class: api.test.UserTestDDT<br>Parameters: jdanzelmanb, Judi, Danzelman, jdanzelmanb@washingtonpost.com, 4415150108</td>
+<td></td>
+<td>3</td>
+<td>api.test.UserTestDDT@2177849e</td></tr>
+<tr>
+<td title='api.test.UserTestDDT.testCreateAndDeleteUser()'><b>testCreateAndDeleteUser</b><br>Test class: api.test.UserTestDDT<br>Parameters: hhunti, Hanna, Hunt, hhunti@simplemachines.org, 2487707879</td>
+<td></td>
+<td>3</td>
+<td>api.test.UserTestDDT@2177849e</td></tr>
+<tr>
+<td title='api.test.UserTestDDT.testCreateAndDeleteUser()'><b>testCreateAndDeleteUser</b><br>Test class: api.test.UserTestDDT<br>Parameters: lheddyl, Lorenzo, Heddy, lheddyl@opera.com, 4561337147</td>
+<td></td>
+<td>3</td>
+<td>api.test.UserTestDDT@2177849e</td></tr>
+<tr>
+<td title='api.test.UserTestDDT.testCreateAndDeleteUser()'><b>testCreateAndDeleteUser</b><br>Test class: api.test.UserTestDDT<br>Parameters: sgeistmannj, Stevena, Geistmann, sgeistmannj@paginegialle.it, 6048226970</td>
+<td></td>
+<td>3</td>
+<td>api.test.UserTestDDT@2177849e</td></tr>
+<tr>
+<td title='api.test.UserTestDDT.testCreateAndDeleteUser()'><b>testCreateAndDeleteUser</b><br>Test class: api.test.UserTestDDT<br>Parameters: tbittlestone4, Tammie, Bittlestone, tbittlestone4@youtu.be, 8307956664</td>
+<td></td>
+<td>3</td>
+<td>api.test.UserTestDDT@2177849e</td></tr>
+<tr>
+<td title='api.test.UserTestDDT.testCreateAndDeleteUser()'><b>testCreateAndDeleteUser</b><br>Test class: api.test.UserTestDDT<br>Parameters: smantm, Sherill, Mant, smantm@sogou.com, 5803105629</td>
+<td></td>
+<td>2</td>
+<td>api.test.UserTestDDT@2177849e</td></tr>
+<tr>
+<td title='api.test.UserTestDDT.testCreateAndDeleteUser()'><b>testCreateAndDeleteUser</b><br>Test class: api.test.UserTestDDT<br>Parameters: tbignellq, Theodor, Bignell, tbignellq@google.pl, 2101042427</td>
+<td></td>
+<td>3</td>
+<td>api.test.UserTestDDT@2177849e</td></tr>
+<tr>
+<td title='api.test.UserTestDDT.testCreateAndDeleteUser()'><b>testCreateAndDeleteUser</b><br>Test class: api.test.UserTestDDT<br>Parameters: thinksen1, Tedd, Hinksen, thinksen1@tmall.com, 3598845157</td>
+<td></td>
+<td>3</td>
+<td>api.test.UserTestDDT@2177849e</td></tr>
+<tr>
+<td title='api.test.StoreTest.testCreateOrder()'><b>testCreateOrder</b><br>Test class: api.test.StoreTest</td>
+<td></td>
+<td>1</td>
+<td>api.test.StoreTest@3541cb24</td></tr>
+<tr>
+<td title='api.test.UserTestDDT.testCreateAndDeleteUser()'><b>testCreateAndDeleteUser</b><br>Test class: api.test.UserTestDDT<br>Parameters: jkearnsk, Jemmie, Kearns, jkearnsk@tmall.com, 8209166924</td>
+<td></td>
+<td>3</td>
+<td>api.test.UserTestDDT@2177849e</td></tr>
+<tr>
+<td title='api.test.UserTestDDT.testCreateAndDeleteUser()'><b>testCreateAndDeleteUser</b><br>Test class: api.test.UserTestDDT<br>Parameters: hquilkin6, Hedvig, Quilkin, hquilkin6@liveinternet.ru, 8783071883</td>
+<td></td>
+<td>3</td>
+<td>api.test.UserTestDDT@2177849e</td></tr>
+<tr>
+<td title='api.test.UserTestDDT.testCreateAndDeleteUser()'><b>testCreateAndDeleteUser</b><br>Test class: api.test.UserTestDDT<br>Parameters: wragbourn9, Weber, Ragbourn, wragbourn9@blogs.com, 3129638543</td>
+<td></td>
+<td>3</td>
+<td>api.test.UserTestDDT@2177849e</td></tr>
+<tr>
+<td title='api.test.UserTestDDT.testCreateAndDeleteUser()'><b>testCreateAndDeleteUser</b><br>Test class: api.test.UserTestDDT<br>Parameters: aodulchonta0, Ania, O'Dulchonta, aodulchonta0@webmd.com, 8584415908</td>
+<td></td>
+<td>3</td>
+<td>api.test.UserTestDDT@2177849e</td></tr>
+<tr>
+<td title='api.test.UserTestDDT.testCreateAndDeleteUser()'><b>testCreateAndDeleteUser</b><br>Test class: api.test.UserTestDDT<br>Parameters: jpasseyf, Jeffy, Passey, jpasseyf@jalbum.net, 7036237239</td>
+<td></td>
+<td>3</td>
+<td>api.test.UserTestDDT@2177849e</td></tr>
+<tr>
+<td title='api.test.UserTestDDT.testCreateAndDeleteUser()'><b>testCreateAndDeleteUser</b><br>Test class: api.test.UserTestDDT<br>Parameters: asiberys, Aldis, Sibery, asiberys@smh.com.au, 8161580724</td>
+<td></td>
+<td>3</td>
+<td>api.test.UserTestDDT@2177849e</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='api.test.UserTest.getUserByUsername()'><b>getUserByUsername</b><br>Test class: api.test.UserTest</td>
+<td><div><pre>java.lang.Throwable: Method api.test.UserTest.getUserByUsername() on instance api.test.UserTest@198b6731 depends on not successfully finished methods 
+[api.test.UserTest.testPostUser() on instance api.test.UserTest@198b6731]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1676500398", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1676500398'><pre>java.lang.Throwable: Method api.test.UserTest.getUserByUsername() on instance api.test.UserTest@198b6731 depends on not successfully finished methods 
+[api.test.UserTest.testPostUser() on instance api.test.UserTest@198b6731]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>api.test.UserTest@198b6731</td></tr>
+<tr>
+<td title='api.test.UserTest.deleteAlreadyDeletedUser()'><b>deleteAlreadyDeletedUser</b><br>Test class: api.test.UserTest</td>
+<td><div><pre>java.lang.Throwable: Method api.test.UserTest.deleteAlreadyDeletedUser() on instance api.test.UserTest@198b6731 depends on not successfully finished methods 
+[api.test.UserTest.getAlreadyDeletedUser() on instance api.test.UserTest@198b6731]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace886119570", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace886119570'><pre>java.lang.Throwable: Method api.test.UserTest.deleteAlreadyDeletedUser() on instance api.test.UserTest@198b6731 depends on not successfully finished methods 
+[api.test.UserTest.getAlreadyDeletedUser() on instance api.test.UserTest@198b6731]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>api.test.UserTest@198b6731</td></tr>
+<tr>
+<td title='api.test.UserTest.updateDeletedUser()'><b>updateDeletedUser</b><br>Test class: api.test.UserTest</td>
+<td><div><pre>java.lang.Throwable: Method api.test.UserTest.updateDeletedUser() on instance api.test.UserTest@198b6731 depends on not successfully finished methods 
+[api.test.UserTest.getAlreadyDeletedUser() on instance api.test.UserTest@198b6731]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1481141739", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1481141739'><pre>java.lang.Throwable: Method api.test.UserTest.updateDeletedUser() on instance api.test.UserTest@198b6731 depends on not successfully finished methods 
+[api.test.UserTest.getAlreadyDeletedUser() on instance api.test.UserTest@198b6731]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>api.test.UserTest@198b6731</td></tr>
+<tr>
+<td title='api.test.UserTest.updateUserByUsername()'><b>updateUserByUsername</b><br>Test class: api.test.UserTest</td>
+<td><div><pre>java.lang.Throwable: Method api.test.UserTest.updateUserByUsername() on instance api.test.UserTest@198b6731 depends on not successfully finished methods 
+[api.test.UserTest.getUserByUsername() on instance api.test.UserTest@198b6731]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1600512192", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1600512192'><pre>java.lang.Throwable: Method api.test.UserTest.updateUserByUsername() on instance api.test.UserTest@198b6731 depends on not successfully finished methods 
+[api.test.UserTest.getUserByUsername() on instance api.test.UserTest@198b6731]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>api.test.UserTest@198b6731</td></tr>
+<tr>
+<td title='api.test.UserTest.getAlreadyDeletedUser()'><b>getAlreadyDeletedUser</b><br>Test class: api.test.UserTest</td>
+<td><div><pre>java.lang.Throwable: Method api.test.UserTest.getAlreadyDeletedUser() on instance api.test.UserTest@198b6731 depends on not successfully finished methods 
+[api.test.UserTest.deleteUserByUsername() on instance api.test.UserTest@198b6731]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace261935590", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace261935590'><pre>java.lang.Throwable: Method api.test.UserTest.getAlreadyDeletedUser() on instance api.test.UserTest@198b6731 depends on not successfully finished methods 
+[api.test.UserTest.deleteUserByUsername() on instance api.test.UserTest@198b6731]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>api.test.UserTest@198b6731</td></tr>
+<tr>
+<td title='api.test.UserTest.deleteUserByUsername()'><b>deleteUserByUsername</b><br>Test class: api.test.UserTest</td>
+<td><div><pre>java.lang.Throwable: Method api.test.UserTest.deleteUserByUsername() on instance api.test.UserTest@198b6731 depends on not successfully finished methods 
+[api.test.UserTest.updateUserByUsername() on instance api.test.UserTest@198b6731]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace225500139", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace225500139'><pre>java.lang.Throwable: Method api.test.UserTest.deleteUserByUsername() on instance api.test.UserTest@198b6731 depends on not successfully finished methods 
+[api.test.UserTest.updateUserByUsername() on instance api.test.UserTest@198b6731]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>api.test.UserTest@198b6731</td></tr>
 </table><p>
 </body>
 </html>

@@ -1,8 +1,11 @@
+api\endpoints\StoreEndPoints.class
+api\test\StoreTest.class
 api\test\UserTest.class
 api\utilities\ExtentReportManager.class
 api\utilities\DataProviders.class
 api\test\UserTestDDT.class
 api\utilities\ExcelUtility.class
 api\endpoints\UserEndPoints.class
+api\payload\Store.class
 api\payload\User.class
 api\endpoints\Routes.class

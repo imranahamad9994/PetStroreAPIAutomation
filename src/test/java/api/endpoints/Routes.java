@@ -28,5 +28,9 @@ public class Routes {
 	
 	//Pet Module
 	
+	public static String petPostURL = base_url+"/pet";
+	public static String petGetURL = base_url+"/pet/{petId}";
+	public static String petDeleteURL = base_url+"/pet/{petId}";
+	
 
 }

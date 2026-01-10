@@ -1,33 +1,991 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="40" passed="40" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-28T10:54:45 IST" name="Suite" finished-at="2025-12-28T10:54:53 IST" duration-ms="8263">
+  <suite started-at="2026-01-03T20:07:08 IST" name="Suite" finished-at="2026-01-03T20:09:06 IST" duration-ms="118615">
     <groups>
     </groups>
-    <test started-at="2025-12-28T10:54:45 IST" name="Test" finished-at="2025-12-28T10:54:53 IST" duration-ms="8263">
+    <test started-at="2026-01-03T20:07:08 IST" name="Test" finished-at="2026-01-03T20:09:06 IST" duration-ms="118615">
       <class name="api.test.UserTest">
-        <test-method is-config="true" signature="setupData()[pri:0, instance:api.test.UserTest@222545dc]" started-at="2025-12-28T10:54:45 IST" name="setupData" finished-at="2025-12-28T10:54:45 IST" duration-ms="187" status="PASS">
+        <test-method is-config="true" signature="setupData()[pri:0, instance:api.test.UserTest@595b007d]" started-at="2026-01-03T20:07:08 IST" name="setupData" finished-at="2026-01-03T20:07:08 IST" duration-ms="214" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupData -->
-        <test-method signature="testPostUser()[pri:1, instance:api.test.UserTest@222545dc]" started-at="2025-12-28T10:54:45 IST" name="testPostUser" finished-at="2025-12-28T10:54:49 IST" duration-ms="3395" status="PASS">
+        <test-method signature="testPostUser()[pri:0, instance:api.test.UserTest@595b007d]" started-at="2026-01-03T20:07:08 IST" name="testPostUser" finished-at="2026-01-03T20:07:13 IST" duration-ms="4772" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPostUser -->
-        <test-method signature="getUserByUsername()[pri:2, instance:api.test.UserTest@222545dc]" started-at="2025-12-28T10:54:49 IST" name="getUserByUsername" finished-at="2025-12-28T10:54:50 IST" duration-ms="1451" status="PASS">
+        <test-method signature="getUserByUsername()[pri:0, instance:api.test.UserTest@595b007d]" started-at="2026-01-03T20:07:13 IST" name="getUserByUsername" finished-at="2026-01-03T20:07:14 IST" depends-on-methods="api.test.UserTest.testPostUser" duration-ms="1570" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getUserByUsername -->
-        <test-method signature="updateUserByUsername()[pri:3, instance:api.test.UserTest@222545dc]" started-at="2025-12-28T10:54:50 IST" name="updateUserByUsername" finished-at="2025-12-28T10:54:52 IST" duration-ms="1510" status="PASS">
+        <test-method signature="updateUserByUsername()[pri:0, instance:api.test.UserTest@595b007d]" started-at="2026-01-03T20:07:14 IST" name="updateUserByUsername" finished-at="2026-01-03T20:07:18 IST" depends-on-methods="api.test.UserTest.getUserByUsername" duration-ms="3158" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateUserByUsername -->
-        <test-method signature="deleteUserByUsername()[pri:4, instance:api.test.UserTest@222545dc]" started-at="2025-12-28T10:54:52 IST" name="deleteUserByUsername" finished-at="2025-12-28T10:54:53 IST" duration-ms="1476" status="PASS">
+        <test-method signature="deleteUserByUsername()[pri:0, instance:api.test.UserTest@595b007d]" started-at="2026-01-03T20:07:18 IST" name="deleteUserByUsername" finished-at="2026-01-03T20:07:19 IST" depends-on-methods="api.test.UserTest.updateUserByUsername" duration-ms="1488" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteUserByUsername -->
+        <test-method signature="getAlreadyDeletedUser()[pri:0, instance:api.test.UserTest@595b007d]" started-at="2026-01-03T20:07:19 IST" name="getAlreadyDeletedUser" finished-at="2026-01-03T20:07:21 IST" depends-on-methods="api.test.UserTest.deleteUserByUsername" duration-ms="1518" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAlreadyDeletedUser -->
+        <test-method signature="deleteAlreadyDeletedUser()[pri:0, instance:api.test.UserTest@595b007d]" started-at="2026-01-03T20:07:21 IST" name="deleteAlreadyDeletedUser" finished-at="2026-01-03T20:07:22 IST" depends-on-methods="api.test.UserTest.getAlreadyDeletedUser" duration-ms="1394" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteAlreadyDeletedUser -->
+        <test-method signature="updateDeletedUser()[pri:0, instance:api.test.UserTest@595b007d]" started-at="2026-01-03T20:07:22 IST" name="updateDeletedUser" finished-at="2026-01-03T20:07:25 IST" depends-on-methods="api.test.UserTest.getAlreadyDeletedUser" duration-ms="3093" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateDeletedUser -->
       </class> <!-- api.test.UserTest -->
+      <class name="api.test.StoreTest">
+        <test-method signature="testCreateOrder()[pri:0, instance:api.test.StoreTest@d35dea7]" started-at="2026-01-03T20:07:25 IST" name="testCreateOrder" finished-at="2026-01-03T20:07:27 IST" duration-ms="1586" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateOrder -->
+        <test-method signature="testGetOrder()[pri:0, instance:api.test.StoreTest@d35dea7]" started-at="2026-01-03T20:07:27 IST" name="testGetOrder" finished-at="2026-01-03T20:07:28 IST" depends-on-methods="api.test.StoreTest.testCreateOrder" duration-ms="1706" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetOrder -->
+        <test-method signature="testDeleteOrder()[pri:0, instance:api.test.StoreTest@d35dea7]" started-at="2026-01-03T20:07:28 IST" name="testDeleteOrder" finished-at="2026-01-03T20:07:32 IST" depends-on-methods="api.test.StoreTest.testGetOrder" duration-ms="3177" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteOrder -->
+      </class> <!-- api.test.StoreTest -->
+      <class name="api.test.UserTestDDT">
+        <test-method signature="testCreateAndDeleteUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.UserTestDDT@7770f470]" started-at="2026-01-03T20:07:34 IST" name="testCreateAndDeleteUser" data-provider="Data" finished-at="2026-01-03T20:07:37 IST" duration-ms="3058" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[aodulchonta0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Ania]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[O'Dulchonta]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[aodulchonta0@webmd.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[8584415908]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAndDeleteUser -->
+        <test-method signature="testCreateAndDeleteUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.UserTestDDT@7770f470]" started-at="2026-01-03T20:07:37 IST" name="testCreateAndDeleteUser" data-provider="Data" finished-at="2026-01-03T20:07:40 IST" duration-ms="3134" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[thinksen1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Tedd]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Hinksen]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[thinksen1@tmall.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[3598845157]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAndDeleteUser -->
+        <test-method signature="testCreateAndDeleteUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.UserTestDDT@7770f470]" started-at="2026-01-03T20:07:40 IST" name="testCreateAndDeleteUser" data-provider="Data" finished-at="2026-01-03T20:07:43 IST" duration-ms="2998" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[nmielnik2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Nelli]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Mielnik]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[nmielnik2@state.tx.us]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[2597222744]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAndDeleteUser -->
+        <test-method signature="testCreateAndDeleteUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.UserTestDDT@7770f470]" started-at="2026-01-03T20:07:43 IST" name="testCreateAndDeleteUser" data-provider="Data" finished-at="2026-01-03T20:07:46 IST" duration-ms="2890" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[aleeman3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Anette]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Leeman]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[aleeman3@domainmarket.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1399075428]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAndDeleteUser -->
+        <test-method signature="testCreateAndDeleteUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.UserTestDDT@7770f470]" started-at="2026-01-03T20:07:46 IST" name="testCreateAndDeleteUser" data-provider="Data" finished-at="2026-01-03T20:07:49 IST" duration-ms="2999" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[tbittlestone4]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Tammie]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Bittlestone]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[tbittlestone4@youtu.be]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[8307956664]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAndDeleteUser -->
+        <test-method signature="testCreateAndDeleteUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.UserTestDDT@7770f470]" started-at="2026-01-03T20:07:49 IST" name="testCreateAndDeleteUser" data-provider="Data" finished-at="2026-01-03T20:07:52 IST" duration-ms="2959" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sdavid5]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Sidonnie]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[David]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[sdavid5@mapquest.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[7935475136]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAndDeleteUser -->
+        <test-method signature="testCreateAndDeleteUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.UserTestDDT@7770f470]" started-at="2026-01-03T20:07:52 IST" name="testCreateAndDeleteUser" data-provider="Data" finished-at="2026-01-03T20:07:55 IST" duration-ms="2922" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[hquilkin6]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Hedvig]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Quilkin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[hquilkin6@liveinternet.ru]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[8783071883]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAndDeleteUser -->
+        <test-method signature="testCreateAndDeleteUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.UserTestDDT@7770f470]" started-at="2026-01-03T20:07:55 IST" name="testCreateAndDeleteUser" data-provider="Data" finished-at="2026-01-03T20:07:58 IST" duration-ms="3035" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ztapscott7]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Zena]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Tapscott]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[ztapscott7@nba.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[8382109527]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAndDeleteUser -->
+        <test-method signature="testCreateAndDeleteUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.UserTestDDT@7770f470]" started-at="2026-01-03T20:07:58 IST" name="testCreateAndDeleteUser" data-provider="Data" finished-at="2026-01-03T20:08:01 IST" duration-ms="2917" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[jriach8]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Jayson]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Riach]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[jriach8@whitehouse.gov]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[9086034190]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAndDeleteUser -->
+        <test-method signature="testCreateAndDeleteUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.UserTestDDT@7770f470]" started-at="2026-01-03T20:08:01 IST" name="testCreateAndDeleteUser" data-provider="Data" finished-at="2026-01-03T20:08:04 IST" duration-ms="2964" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[wragbourn9]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Weber]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Ragbourn]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[wragbourn9@blogs.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[3129638543]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAndDeleteUser -->
+        <test-method signature="testCreateAndDeleteUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.UserTestDDT@7770f470]" started-at="2026-01-03T20:08:04 IST" name="testCreateAndDeleteUser" data-provider="Data" finished-at="2026-01-03T20:08:07 IST" duration-ms="3100" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[khullesa]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Ketti]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Hulles]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[khullesa@discuz.net]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[9756859633]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAndDeleteUser -->
+        <test-method signature="testCreateAndDeleteUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.UserTestDDT@7770f470]" started-at="2026-01-03T20:08:07 IST" name="testCreateAndDeleteUser" data-provider="Data" finished-at="2026-01-03T20:08:10 IST" duration-ms="3219" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[jdanzelmanb]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Judi]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Danzelman]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[jdanzelmanb@washingtonpost.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[4415150108]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAndDeleteUser -->
+        <test-method signature="testCreateAndDeleteUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.UserTestDDT@7770f470]" started-at="2026-01-03T20:08:10 IST" name="testCreateAndDeleteUser" data-provider="Data" finished-at="2026-01-03T20:08:14 IST" duration-ms="3200" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ableasdillec]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Artus]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Bleasdille]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[ableasdillec@ucoz.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[6615725818]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAndDeleteUser -->
+        <test-method signature="testCreateAndDeleteUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.UserTestDDT@7770f470]" started-at="2026-01-03T20:08:14 IST" name="testCreateAndDeleteUser" data-provider="Data" finished-at="2026-01-03T20:08:17 IST" duration-ms="3085" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[rdooreyd]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Reuven]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Doorey]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[rdooreyd@google.de]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1654577999]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAndDeleteUser -->
+        <test-method signature="testCreateAndDeleteUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.UserTestDDT@7770f470]" started-at="2026-01-03T20:08:17 IST" name="testCreateAndDeleteUser" data-provider="Data" finished-at="2026-01-03T20:08:20 IST" duration-ms="3020" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[cedgertone]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Cyrille]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Edgerton]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[cedgertone@aboutads.info]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[5804772434]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAndDeleteUser -->
+        <test-method signature="testCreateAndDeleteUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.UserTestDDT@7770f470]" started-at="2026-01-03T20:08:20 IST" name="testCreateAndDeleteUser" data-provider="Data" finished-at="2026-01-03T20:08:23 IST" duration-ms="3063" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[jpasseyf]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Jeffy]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Passey]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[jpasseyf@jalbum.net]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[7036237239]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAndDeleteUser -->
+        <test-method signature="testCreateAndDeleteUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.UserTestDDT@7770f470]" started-at="2026-01-03T20:08:23 IST" name="testCreateAndDeleteUser" data-provider="Data" finished-at="2026-01-03T20:08:26 IST" duration-ms="3030" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[kpavieg]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Kilian]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Pavie]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[kpavieg@diigo.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[4463162893]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAndDeleteUser -->
+        <test-method signature="testCreateAndDeleteUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.UserTestDDT@7770f470]" started-at="2026-01-03T20:08:26 IST" name="testCreateAndDeleteUser" data-provider="Data" finished-at="2026-01-03T20:08:29 IST" duration-ms="3209" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[bmewhah]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Ban]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Mewha]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[bmewhah@wufoo.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[5779848069]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAndDeleteUser -->
+        <test-method signature="testCreateAndDeleteUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.UserTestDDT@7770f470]" started-at="2026-01-03T20:08:29 IST" name="testCreateAndDeleteUser" data-provider="Data" finished-at="2026-01-03T20:08:32 IST" duration-ms="3183" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[hhunti]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Hanna]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Hunt]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[hhunti@simplemachines.org]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[2487707879]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAndDeleteUser -->
+        <test-method signature="testCreateAndDeleteUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.UserTestDDT@7770f470]" started-at="2026-01-03T20:08:32 IST" name="testCreateAndDeleteUser" data-provider="Data" finished-at="2026-01-03T20:08:35 IST" duration-ms="3106" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sgeistmannj]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Stevena]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Geistmann]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[sgeistmannj@paginegialle.it]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[6048226970]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAndDeleteUser -->
+        <test-method signature="testCreateAndDeleteUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.UserTestDDT@7770f470]" started-at="2026-01-03T20:08:35 IST" name="testCreateAndDeleteUser" data-provider="Data" finished-at="2026-01-03T20:08:38 IST" duration-ms="3113" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[jkearnsk]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Jemmie]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Kearns]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[jkearnsk@tmall.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[8209166924]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAndDeleteUser -->
+        <test-method signature="testCreateAndDeleteUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.UserTestDDT@7770f470]" started-at="2026-01-03T20:08:38 IST" name="testCreateAndDeleteUser" data-provider="Data" finished-at="2026-01-03T20:08:41 IST" duration-ms="3052" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[lheddyl]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Lorenzo]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Heddy]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[lheddyl@opera.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[4561337147]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAndDeleteUser -->
+        <test-method signature="testCreateAndDeleteUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.UserTestDDT@7770f470]" started-at="2026-01-03T20:08:41 IST" name="testCreateAndDeleteUser" data-provider="Data" finished-at="2026-01-03T20:08:45 IST" duration-ms="3169" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[smantm]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Sherill]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Mant]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[smantm@sogou.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[5803105629]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAndDeleteUser -->
+        <test-method signature="testCreateAndDeleteUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.UserTestDDT@7770f470]" started-at="2026-01-03T20:08:45 IST" name="testCreateAndDeleteUser" data-provider="Data" finished-at="2026-01-03T20:08:48 IST" duration-ms="3217" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[smarringtonn]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Shaina]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Marrington]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[smarringtonn@smugmug.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1703461281]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAndDeleteUser -->
+        <test-method signature="testCreateAndDeleteUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.UserTestDDT@7770f470]" started-at="2026-01-03T20:08:48 IST" name="testCreateAndDeleteUser" data-provider="Data" finished-at="2026-01-03T20:08:51 IST" duration-ms="3092" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sshearstoneo]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Steffane]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Shearstone]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[sshearstoneo@cbc.ca]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[8791634619]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAndDeleteUser -->
+        <test-method signature="testCreateAndDeleteUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.UserTestDDT@7770f470]" started-at="2026-01-03T20:08:51 IST" name="testCreateAndDeleteUser" data-provider="Data" finished-at="2026-01-03T20:08:54 IST" duration-ms="2979" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ppennamanp]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Patrice]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Pennaman]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[ppennamanp@sciencedirect.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[4871892527]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAndDeleteUser -->
+        <test-method signature="testCreateAndDeleteUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.UserTestDDT@7770f470]" started-at="2026-01-03T20:08:54 IST" name="testCreateAndDeleteUser" data-provider="Data" finished-at="2026-01-03T20:08:57 IST" duration-ms="3072" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[tbignellq]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Theodor]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Bignell]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[tbignellq@google.pl]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[2101042427]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAndDeleteUser -->
+        <test-method signature="testCreateAndDeleteUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.UserTestDDT@7770f470]" started-at="2026-01-03T20:08:57 IST" name="testCreateAndDeleteUser" data-provider="Data" finished-at="2026-01-03T20:09:00 IST" duration-ms="3094" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ajosefsohnr]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Aurthur]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Josefsohn]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[ajosefsohnr@marketwatch.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1212706962]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAndDeleteUser -->
+        <test-method signature="testCreateAndDeleteUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.UserTestDDT@7770f470]" started-at="2026-01-03T20:09:00 IST" name="testCreateAndDeleteUser" data-provider="Data" finished-at="2026-01-03T20:09:03 IST" duration-ms="3143" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[asiberys]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Aldis]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Sibery]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[asiberys@smh.com.au]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[8161580724]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAndDeleteUser -->
+        <test-method signature="testCreateAndDeleteUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.UserTestDDT@7770f470]" started-at="2026-01-03T20:09:03 IST" name="testCreateAndDeleteUser" data-provider="Data" finished-at="2026-01-03T20:09:06 IST" duration-ms="2995" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ssambellst]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Staci]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Sambells]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[ssambellst@berkeley.edu]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[6979471902]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAndDeleteUser -->
+      </class> <!-- api.test.UserTestDDT -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
