@@ -69,6 +69,21 @@ public class PetTest {
 			
 		}
 		
+		@Test(dependsOnMethods = "testCreatePet")
+		public void testFindPetByStatus()
+		{
+			Response response = PetEndPoints.findPetsByStatus("available");
+			
+			response.then()
+						.statusCode(200)
+						.body("size()", greaterThan(0))
+						.body("status", everyItem(equalTo("available")))
+						.body("name", hasItem(petPayload.getName()))
+						.body("id", hasItem(petPayload.getId()))
+						.log().all();
+		}
+		
+		
 		@Test(dependsOnMethods = "testGetPet")
 		public void testDeletePet()
 		{

@@ -37,13 +37,20 @@ public class PetEndPoints {
 	public static Response deletePet(int petId)
 	{
 		Response response = given()
-				
-				.when()
-					.delete(Routes.petDeleteURL, petId);
+							.when()
+								.delete(Routes.petDeleteURL, petId);
 									
 				
 		return response;
-		
+	}
+	
+	public static Response findPetsByStatus(String status)
+	{
+		Response response = given()
+								.queryParam("status", status)
+							.when()
+								.get(Routes.petFindByStatusURL);
+		return response;
 	}
 
 	

@@ -5,10 +5,8 @@
     <classes>
       <class name="api.test.PetTest">
         <methods>
-          <include name="testGetPet"/>
-          <include name="testCreatPet"/>
-          <include name="testAlreadyDeletedPet"/>
-          <include name="testDeletePet"/>
+          <include name="testFindPetByStatus"/>
+          <include name="testCreatePet"/>
         </methods>
       </class> <!-- api.test.PetTest -->
     </classes>

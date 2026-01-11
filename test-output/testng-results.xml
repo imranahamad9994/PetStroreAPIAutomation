@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-10T10:00:48 IST" name="Default suite" finished-at="2026-01-10T10:00:59 IST" duration-ms="10836">
+  <suite started-at="2026-01-11T09:20:09 IST" name="Default suite" finished-at="2026-01-11T09:20:22 IST" duration-ms="13169">
     <groups>
     </groups>
-    <test started-at="2026-01-10T10:00:48 IST" name="Default test" finished-at="2026-01-10T10:00:59 IST" duration-ms="10836">
+    <test started-at="2026-01-11T09:20:09 IST" name="Default test" finished-at="2026-01-11T09:20:22 IST" duration-ms="13169">
       <class name="api.test.PetTest">
-        <test-method signature="testCreatePet()[pri:0, instance:api.test.PetTest@3f56875e]" started-at="2026-01-10T10:00:48 IST" name="testCreatePet" finished-at="2026-01-10T10:00:52 IST" duration-ms="4514" status="PASS">
+        <test-method signature="testCreatePet()[pri:0, instance:api.test.PetTest@2b4bac49]" started-at="2026-01-11T09:20:09 IST" name="testCreatePet" finished-at="2026-01-11T09:20:13 IST" duration-ms="4470" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCreatePet -->
-        <test-method signature="testGetPet()[pri:0, instance:api.test.PetTest@3f56875e]" started-at="2026-01-10T10:00:52 IST" name="testGetPet" finished-at="2026-01-10T10:00:54 IST" depends-on-methods="api.test.PetTest.testCreatePet" duration-ms="1537" status="PASS">
+        <test-method signature="testFindPetByStatus()[pri:0, instance:api.test.PetTest@2b4bac49]" started-at="2026-01-11T09:20:13 IST" name="testFindPetByStatus" finished-at="2026-01-11T09:20:16 IST" depends-on-methods="api.test.PetTest.testCreatePet" duration-ms="2411" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFindPetByStatus -->
+        <test-method signature="testGetPet()[pri:0, instance:api.test.PetTest@2b4bac49]" started-at="2026-01-11T09:20:16 IST" name="testGetPet" finished-at="2026-01-11T09:20:17 IST" depends-on-methods="api.test.PetTest.testCreatePet" duration-ms="1699" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetPet -->
-        <test-method signature="testDeletePet()[pri:0, instance:api.test.PetTest@3f56875e]" started-at="2026-01-10T10:00:54 IST" name="testDeletePet" finished-at="2026-01-10T10:00:57 IST" depends-on-methods="api.test.PetTest.testGetPet" duration-ms="3158" status="PASS">
+        <test-method signature="testDeletePet()[pri:0, instance:api.test.PetTest@2b4bac49]" started-at="2026-01-11T09:20:17 IST" name="testDeletePet" finished-at="2026-01-11T09:20:20 IST" depends-on-methods="api.test.PetTest.testGetPet" duration-ms="3041" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDeletePet -->
-        <test-method signature="testAlreadyDeletedPet()[pri:0, instance:api.test.PetTest@3f56875e]" started-at="2026-01-10T10:00:57 IST" name="testAlreadyDeletedPet" finished-at="2026-01-10T10:00:59 IST" depends-on-methods="api.test.PetTest.testDeletePet" duration-ms="1557" status="PASS">
+        <test-method signature="testAlreadyDeletedPet()[pri:0, instance:api.test.PetTest@2b4bac49]" started-at="2026-01-11T09:20:20 IST" name="testAlreadyDeletedPet" finished-at="2026-01-11T09:20:22 IST" depends-on-methods="api.test.PetTest.testDeletePet" duration-ms="1486" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAlreadyDeletedPet -->
