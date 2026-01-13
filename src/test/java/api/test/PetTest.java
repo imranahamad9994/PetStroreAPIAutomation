@@ -7,6 +7,7 @@ import java.util.List;
 import org.testng.annotations.Test;
 
 import com.github.javafaker.Faker;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
 import api.endpoints.PetEndPoints;
 import api.payload.Pet;
@@ -43,6 +44,8 @@ public class PetTest {
 			Response response = PetEndPoints.createPet(petPayload);
 			response.then()
 				.statusCode(200)
+				.assertThat()
+				.body(matchesJsonSchemaInClasspath("schemas/pet-schema.json"))
 				.body("name", equalTo(petPayload.getName()))
 				.body("status", equalTo("available"))
 				.body("photoUrls.size()", greaterThan(0))
@@ -59,6 +62,8 @@ public class PetTest {
 			Response response = PetEndPoints.getPet(petPayload.getId());
 			response.then()
 					.statusCode(200)
+					.assertThat()
+					.body(matchesJsonSchemaInClasspath("schemas/pet-schema.json"))
 					.body("id", equalTo(petPayload.getId()))
 					.body("name", equalTo(petPayload.getName()))
 					.body("status", equalTo("available"))
@@ -76,6 +81,8 @@ public class PetTest {
 			
 			response.then()
 						.statusCode(200)
+						.assertThat()
+						.body(matchesJsonSchemaInClasspath("schemas/pet-list-schema.json"))
 						.body("size()", greaterThan(0))
 						.body("status", everyItem(equalTo("available")))
 						.body("name", hasItem(petPayload.getName()))
