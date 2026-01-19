@@ -11,6 +11,12 @@ It covers functional, negative, and contract-level validations following real-wo
 - TestNG
 - Maven
 
+## 📁 Project Structure
+- api.payload – POJOs for request/response bodies
+- api.endpoints – API endpoint definitions
+- api.test – TestNG test classes
+- schemas – JSON schemas for contract validation
+
 ---
 
 ## 📌 APIs Covered
