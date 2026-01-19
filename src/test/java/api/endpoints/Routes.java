@@ -34,5 +34,7 @@ public class Routes {
 	
 	public static String petFindByStatusURL = base_url+"/pet/findByStatus";
 	
+	public static String petUploadImageURL = base_url+"/pet/{petId}/uploadImage";
+	
 
 }

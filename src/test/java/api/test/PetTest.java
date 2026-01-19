@@ -2,6 +2,7 @@ package api.test;
 
 import static org.hamcrest.Matchers.*;
 
+import java.io.File;
 import java.util.List;
 
 import org.testng.annotations.Test;
@@ -88,6 +89,20 @@ public class PetTest {
 						.body("name", hasItem(petPayload.getName()))
 						.body("id", hasItem(petPayload.getId()))
 						.log().all();
+		}
+		
+		@Test(dependsOnMethods="testCreatePet")
+		public void testUploadPetImage()
+		{
+			File image = new File("src/test/resources/files/pet.jpg");
+			
+			Response response = PetEndPoints.uploadPetImage(petPayload.getId(), image);
+			
+			response.then()
+						.statusCode(200)
+						.body("message", containsString("uploaded"))
+						.log().all();
+			
 		}
 		
 		
